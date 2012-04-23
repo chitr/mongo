@@ -250,7 +250,6 @@ namespace mongo {
 
             maxSelectTime.tv_sec = 0;
             maxSelectTime.tv_usec = 10000;
-//            const int ret = select(maxfd+1, fds, NULL, NULL, &maxSelectTime);
             const int ret = select(maxfd+1, fds, NULL, NULL, NULL);
 
             if (ret == 0) {
